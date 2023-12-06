@@ -90,7 +90,7 @@ fun AppScreen(appViewModel: AppViewModel = viewModel()) {
                 onValueChange = { type -> recherche = type },
                 singleLine = true,
                 label = {
-                        Text("Entrez un nom de joueur")
+                    Text("Entrez un nom de joueur")
                 },
                 keyboardOptions = KeyboardOptions(
                     imeAction = ImeAction.Search,
@@ -107,7 +107,7 @@ fun AppScreen(appViewModel: AppViewModel = viewModel()) {
                     }
                 })
             )
-            
+
 
             OutlinedButton(onClick = {
                 if (appUiState is AppState.Success){
@@ -115,7 +115,7 @@ fun AppScreen(appViewModel: AppViewModel = viewModel()) {
                 } else {
                     appViewModel.getFirstSummoner(recherche)
                 }
-                
+
             }) {
                 Text(text = "Rechercher")
             }
